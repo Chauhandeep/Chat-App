@@ -17,16 +17,15 @@ io.on('connection',(socket)=>{
 
   socket.on('createMessage',function(message){
      console.log('Create Message',message);
-  });
-
-  socket.emit('newMessage',{
-    from:'Deepanshu',
-    text:'Hello there',
-    createdAt : 213123
+     io.emit('newMessage',{
+       from : message.from,
+       text : message.text,
+       createdAt : new Date().getTime()
+     });
   });
 
   socket.on('disconnect',()=>{
-    console.log('createEmail','client Disconnected');
+    console.log('client Disconnected');
   });
 });
 
