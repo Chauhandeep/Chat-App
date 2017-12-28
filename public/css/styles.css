@@ -8,7 +8,9 @@
 }
 
 ul, li {
+  list-style-type: none;
   list-style-position: inside;
+  padding: 10px;
 }
 
 h3 {
@@ -124,6 +126,7 @@ button:disabled {
 .chat__messages {
   flex-grow: 1;
   overflow-y: scroll;
+  padding: 10px;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -154,10 +157,6 @@ button:disabled {
   flex-grow: 1;
 }
 
-.chat__messages {
-  list-style-type: none;
-  padding: 10px;
-}
 
 .message {
   padding: 10px;
